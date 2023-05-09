@@ -11,7 +11,6 @@ namespace TextRPG
     public class BattleScene : Scene
     {
         private Monster monster;
-        private List<Skill> skill;
 
         public BattleScene(Game game) : base(game)
         {
@@ -33,15 +32,7 @@ namespace TextRPG
 
             ConsoleKeyInfo input = Console.ReadKey();
 
-            switch (input.Key)
-            {
-                case ConsoleKey.D1:
-                    skill[1];
-                    break;
-                case ConsoleKey.D2:
-                    
-                    break;
-            }
+
         }
 
         public void StartBattle(Monster monster)

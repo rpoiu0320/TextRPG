@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace TextRPG
 {
-    public class SkillEscape : Skill
+    public class Escape : Skill
     {
         public string skillName = "도망가기";
         Game game = new Game();
-        public SkillEscape(string skillName) : base(skillName)
+        public Escape(string skillName) : base(skillName)
         {
             this.skillName = skillName;
         }
-        public void Escape()
+        public void EscapeAction()
         {
             Random random = new Random();
             Console.WriteLine("플레이어의 도망가기!");

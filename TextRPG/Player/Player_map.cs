@@ -9,9 +9,8 @@ namespace TextRPG
 {
     public class Player_map
     {
-        public char icon = '♥';
+        public string icon = " ♥";
         public Position pos;
-        int incount = 0;
 
         public void Move(Direction dir)
         {
@@ -36,11 +35,6 @@ namespace TextRPG
             if (Data.map[pos.x, pos.y] == Data.TileStyle.Wall)
             {
                 pos = prevPos;
-            }
-
-            if (Data.map[pos.x, pos.y] == Data.TileStyle.Bush)
-            {
-                incount++;
             }
         }
     }

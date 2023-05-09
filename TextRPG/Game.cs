@@ -33,11 +33,12 @@ namespace TextRPG
 
         private void Init()
         {
+            Data.Init();
+            Data.LodeLeve1();
             mainMenuScene =     new MainMenuScene(this);
             mapScene =          new MapScene(this);
             inventoryScene =    new InventoryScene(this);
             battleScene =       new BattleScene(this);
-
             curScene = mainMenuScene;
         }
 

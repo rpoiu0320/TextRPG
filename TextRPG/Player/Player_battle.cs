@@ -10,7 +10,7 @@ namespace TextRPG
 {
     public class Player_battle
     {
-        List<Skill> skill = new List<Skill>();
+        
         public Player_battle()
         {
             CurHp = 30;
@@ -21,7 +21,7 @@ namespace TextRPG
             CurExp = 0;
             MaxExp = 10;
             AP = 5;
-            skills = new List<Skill>();
+            skill = new List<Skill>();
         }
         public int CurHp { get; private set; }
         public int MaxHp { get; private set; }
@@ -31,7 +31,8 @@ namespace TextRPG
         public int CurExp { get; private set; }
         public int MaxExp { get; private set; }
         public int AP { get; private set; }
-        public List<Skill> skills;
+        
+        List<Skill> skill;
 
         public void GetItem(Item item)
         {

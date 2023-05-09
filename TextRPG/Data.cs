@@ -26,9 +26,6 @@ namespace TextRPG
             items = new List<Item>();
             inventory = new List<Item>();
             skill = new List<Skill>();
-
-            skill.Add(new SkillAttack("공격"));
-            skill.Add(new SkillEscape("도망"));
         }
 
         public static void Release()
@@ -41,14 +38,14 @@ namespace TextRPG
             map = new TileStyle[,]
             {
                 { TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Item, TileStyle.Road, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Bush, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
-                { TileStyle.Item, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Wall},
-                { TileStyle.Wall, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Goal, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Item, TileStyle.Road, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Bush, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Bush, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Bush, TileStyle.Bush, TileStyle.Wall},
+                { TileStyle.Wall, TileStyle.Item, TileStyle.Bush, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Road, TileStyle.Bush, TileStyle.Goal, TileStyle.Wall},
                 { TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall, TileStyle.Wall},
             };
 

@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace TextRPG
 {
-    public class SkillAttack : Skill
+    public class Attack : Skill
     {
         public string skillName = "공격";
-        public SkillAttack(string skillName) : base(skillName)
+        public Attack(string skillName) : base(skillName)
         {
             this.skillName = skillName;
         }
 
-        
-        public void Attack(Monster monster, Player_battle player)
+        public void AttackAction(Monster monster, Player_battle player)
         {
             Console.WriteLine($"{monster.name}에게 공격!");
             Thread.Sleep(100);

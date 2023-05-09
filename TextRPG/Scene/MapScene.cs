@@ -9,6 +9,8 @@ namespace TextRPG
 {
     public class MapScene : Scene
     {
+        Random random = new Random();
+        int incount = 0;
         public MapScene(Game game) : base(game) 
         {
 
@@ -17,6 +19,7 @@ namespace TextRPG
         public override void Render()
         {
             PrintMap();
+            MeetingMonster();
         }
 
         public override void Update()
@@ -51,9 +54,9 @@ namespace TextRPG
         private void PrintMap()
         {
             StringBuilder sb = new StringBuilder();
-            for(int y = 0; y < Data.map.GetLength(0); y++)
+            for(int y = 0; y < Data.map.GetLength(1); y++)
             {
-                for(int x = 0; x < Data.map.GetLength(1); x++)
+                for(int x = 0; x < Data.map.GetLength(0); x++)
                 {
                     if (Data.map[x, y] == Data.TileStyle.Wall)
                     {
@@ -61,7 +64,7 @@ namespace TextRPG
                     }
                     else if (Data.map[x, y] == Data.TileStyle.Road)
                     {
-                        sb.Append(' ');
+                        sb.Append("  ");
                     }
                     else if (Data.map[x, y] == Data.TileStyle.Bush)
                     {
@@ -75,9 +78,8 @@ namespace TextRPG
                     {
                         sb.Append('★');
                     }
-
-                    sb.AppendLine();
                 }
+                sb.AppendLine();
             }
             Console.WriteLine(sb.ToString());
 
@@ -86,6 +88,7 @@ namespace TextRPG
             if (Data.map[Data.player_map.pos.x, Data.player_map.pos.y] ==
                 Data.TileStyle.Bush)
             {
+                incount++;
                 Console.ForegroundColor = ConsoleColor.Green;
             }
 
@@ -95,8 +98,17 @@ namespace TextRPG
                 Console.ForegroundColor = ConsoleColor.Yellow;
             }
 
+            Console.SetCursorPosition(Data.player_map.pos.x, Data.player_map.pos.y);
             Console.WriteLine(Data.player_map.icon);
             Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public void MeetingMonster()
+        {
+            if(incount/3 == 0)
+            {
+
+            }
         }
     }
 }
